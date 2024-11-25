@@ -1,0 +1,128 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+<div class="container py-4">
+    <!-- Welcome Section -->
+    <div class="row mb-4">
+        <div class="col-12">
+            <div class="card bg-primary text-white">
+                <div class="card-body">
+                    <h2>Welcome, {{ current_user.full_name }}! 👋</h2>
+                    <p class="mb-0">Ready to discover music that matches your mood?</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quick Stats -->
+    <div class="row mb-4">
+        <div class="col-md-4 mb-3">
+            <div class="card h-100">
+                <div class="card-body text-center">
+                    <i class="fas fa-headphones fa-3x mb-3 text-primary"></i>
+                    <h5 class="card-title">Your Playlists</h5>
+                    <h3 class="mb-0">5</h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-3">
+            <div class="card h-100">
+                <div class="card-body text-center">
+                    <i class="fas fa-music fa-3x mb-3 text-success"></i>
+                    <h5 class="card-title">Favorite Songs</h5>
+                    <h3 class="mb-0">24</h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-3">
+            <div class="card h-100">
+                <div class="card-body text-center">
+                    <i class="fas fa-heart fa-3x mb-3 text-danger"></i>
+                    <h5 class="card-title">Mood Analysis</h5>
+                    <h3 class="mb-0">Happy</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Recent Playlists and Recommendations -->
+    <div class="row">
+        <!-- Recent Playlists -->
+        <div class="col-md-6 mb-4">
+            <div class="card h-100">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h5 class="mb-0">Recent Playlists</h5>
+                    <button class="btn btn-sm btn-primary">Create New</button>
+                </div>
+                <div class="card-body">
+                    <div class="list-group list-group-flush">
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h6 class="mb-1">Happy Vibes</h6>
+                                <small>3 days ago</small>
+                            </div>
+                            <small class="text-muted">12 songs • 45 minutes</small>
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h6 class="mb-1">Focus Mode</h6>
+                                <small>1 week ago</small>
+                            </div>
+                            <small class="text-muted">15 songs • 1 hour</small>
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h6 class="mb-1">Chill Evening</h6>
+                                <small>2 weeks ago</small>
+                            </div>
+                            <small class="text-muted">8 songs • 32 minutes</small>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Recommendations -->
+        <div class="col-md-6 mb-4">
+            <div class="card h-100">
+                <div class="card-header">
+                    <h5 class="mb-0">Recommended for You</h5>
+                </div>
+                <div class="card-body">
+                    <div class="list-group list-group-flush">
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-play-circle text-primary me-3"></i>
+                                <div>
+                                    <h6 class="mb-0">Morning Energy Boost</h6>
+                                    <small class="text-muted">Perfect for your morning routine</small>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-play-circle text-primary me-3"></i>
+                                <div>
+                                    <h6 class="mb-0">Productivity Mix</h6>
+                                    <small class="text-muted">Focus-enhancing tracks</small>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-play-circle text-primary me-3"></i>
+                                <div>
+                                    <h6 class="mb-0">Evening Relaxation</h6>
+                                    <small class="text-muted">Calm down after a long day</small>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
